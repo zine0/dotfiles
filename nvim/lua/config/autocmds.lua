@@ -1,5 +1,6 @@
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
+local keymap = vim.keymap.set
 
 -- Format when Save
 -- augroup("Format", { clear = true })
@@ -13,5 +14,4 @@ vim.cmd([[
     autocmd!
     autocmd BufRead * autocmd BufWinEnter * ++once normal! zx
   augroup end
-
   ]])

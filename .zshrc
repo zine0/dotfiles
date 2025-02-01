@@ -113,9 +113,10 @@ source $ZSH/oh-my-zsh.sh
 
 
 alias cl="clear"
+alias ls="lsd"
 
 export TERM="xterm-256color"
-export FZF_COMPLETION_TRIGGER=';'
+export FZF_COMPLETION_TRIGGER='**'
 source <(fzf --zsh)
 export PATH=$HOME/.local/bin:$PATH
 
