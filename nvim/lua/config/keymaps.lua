@@ -31,10 +31,10 @@ for i = 1, 9, 1 do
 	keymap("n", "<leader>"..i, i.."gt<CR>", opt)
 end
 
-  vim.keymap.set('n', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
-  vim.keymap.set('n', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
-  vim.keymap.set('n', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
-  vim.keymap.set('n', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
+  vim.keymap.set('n', '<C-h>', [[<Cmd>wincmd h<CR>]], opt)
+  vim.keymap.set('n', '<C-j>', [[<Cmd>wincmd j<CR>]], opt)
+  vim.keymap.set('n', '<C-k>', [[<Cmd>wincmd k<CR>]], opt)
+  vim.keymap.set('n', '<C-l>', [[<Cmd>wincmd l<CR>]], opt)
 -- keymap({"n","i","v"},"<C-j>","<Down>",opt)
 -- keymap({"n","i","v"},"<C-k>","<Up>",opt)
 function _G.set_terminal_keymaps()

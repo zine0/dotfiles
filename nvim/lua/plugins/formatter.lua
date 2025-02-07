@@ -1,6 +1,10 @@
 return {
 	"mhartington/formatter.nvim",
 	-- lazy = false,
+    cmd = {
+        "FormatWrite",
+        "Format"
+    },
 	keys = {
 		{ "<leader>p", "<Cmd>w||FormatWrite<CR>||w", desc = "Format This File And Write" },
 	},
@@ -79,7 +83,7 @@ return {
 					try_node_modules = true,
 				}
 			end,
-			htmldjango= function()
+			htmldjango = function()
 				local util = require("formatter.util")
 				return {
 					exe = "djlint",

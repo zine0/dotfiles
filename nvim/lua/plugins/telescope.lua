@@ -4,10 +4,10 @@ return {
 	cmd = "Telescope",
 	keys = {
 
-		{ "n", "<leader>ff", builtin.find_files, {} },
-		{ "n", "<leader>fg", builtin.live_grep, {} },
-		{ "n", "<leader>fb", builtin.buffers, {} },
-		{ "n", "<leader>fh", builtin.help_tags, {} },
+		{  "<leader>ff", builtin.find_files,mode = "n", {} },
+		{  "<leader>fg", builtin.live_grep, mode = "n",{} },
+		{ "<leader>fb", builtin.buffers, mode = "n",{} },
+		{  "<leader>fh", builtin.help_tags, mode = "n",{} },
 	},
 	tag = "0.1.8",
 	-- or                              , branch = '0.1.x',
