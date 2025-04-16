@@ -1,0 +1,14 @@
+theme = "onedark"
+[editor]
+line-number = "relative"
+# cursorline = true
+popup-border = "all"
+clipboard-provider = "win32-yank"
+true-color = true
+[editor.cursor-shape]
+insert = "bar"
+select = "block"
+[editor.lsp]
+display-inlay-hints = true
+[editor.indent-guides]
+render = true

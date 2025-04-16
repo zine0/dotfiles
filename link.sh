@@ -31,3 +31,4 @@ link_file "$HOME/dotfiles/.zshrc" "$HOME/.zshrc"
 # link_file "$HOME/dotfiles/nvim" "$HOME/.config/nvim"  # 注意此处无末尾斜杠
 link_file "$HOME/dotfiles/nvim-vscode" "$HOME/.config/nvim"  # 注意此处无末尾斜杠
 link_file "$HOME/dotfiles/.tmux.conf" "$HOME/.tmux.conf"
+link_file "$HOME/dotfiles/helix" "$HOME/.config/helix"
