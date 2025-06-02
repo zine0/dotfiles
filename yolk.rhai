@@ -11,5 +11,10 @@ export let eggs = #{
         helix: #{
         targets: "~/.config/helix",
         enabled:true,
+    },
+
+    hypr: #{
+        targets: "~/.config/hypr",
+        enabled:true,
     }
 };
