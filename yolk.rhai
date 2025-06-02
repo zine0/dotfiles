@@ -12,9 +12,12 @@ export let eggs = #{
         targets: "~/.config/helix",
         enabled:true,
     },
-
     hypr: #{
         targets: "~/.config/hypr",
+        enabled:true,
+    },
+    waybar :#{
+        targets: "~/.config/waybar",
         enabled:true,
     }
 };
