@@ -1,0 +1,21 @@
+theme = "onedark"
+
+[editor]
+line-number="relative"
+cursorline=true
+bufferline="multiple"
+popup-border="all"
+
+
+[editor.lsp]
+display-inlay-hints=true
+
+[editor.cursor-shape]
+insert="bar"
+select="bar"
+
+[editor.indent-guides]
+render=true
+
+[editor.soft-wrap]
+enable=true

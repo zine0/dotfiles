@@ -7,5 +7,9 @@ export let eggs = #{
         targets: "~/.config/alacritty",
         templates:["alacritty.yml"],
         enabled:true,
+    },
+        helix: #{
+        targets: "~/.config/helix",
+        enabled:true,
     }
 };

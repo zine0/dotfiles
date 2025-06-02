@@ -1,0 +1,5 @@
+[[language]]
+name = "cpp"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+formatter = { command = "clang-format", args = ["-style=file:/home/zine/.clang-format"] }
