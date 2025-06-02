@@ -16,8 +16,12 @@ export let eggs = #{
         targets: "~/.config/hypr",
         enabled:true,
     },
-    waybar :#{
+    waybar: #{
         targets: "~/.config/waybar",
+        enabled:true,
+    },
+    fish: #{
+        targets: "~/.config/fish",
         enabled:true,
     }
 };
