@@ -5,7 +5,7 @@ line-number="relative"
 cursorline=true
 bufferline="multiple"
 popup-border="all"
-
+clipboard-provider = "wayland"
 
 [editor.lsp]
 display-inlay-hints=true
@@ -19,3 +19,4 @@ render=true
 
 [editor.soft-wrap]
 enable=true
+

@@ -23,5 +23,9 @@ export let eggs = #{
     fish: #{
         targets: "~/.config/fish",
         enabled:true,
-    }
+    },
+    nvim: #{
+    	targets: "~/.config/nvim",
+    	enabled:true,
+    },
 };
