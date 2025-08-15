@@ -34,7 +34,7 @@ return {
 			pyright = {},
 			cmake = {},
 			zls = {},
-			rust_analyzer = {},
+			-- rust_analyzer = {},
 			dockerls = {},
 			cssls = {},
 			docker_compose_language_service = {},

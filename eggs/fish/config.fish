@@ -16,3 +16,13 @@ if not string match -q -- $PNPM_HOME $PATH
     set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
+# uv
+fish_add_path "/home/zine/.local/bin"
+fish_add_path -g -p ~/flutter/bin
+
+# go
+fish_add_path "/home/zine/go/bin"
+
+# cargo/bin
+fish_add_path "/home/zine/.cargo/bin"
