@@ -2,13 +2,24 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+zoxide init fish | source
+starship init fish | source
+
 alias cl clear
 alias hx helix
-alias ls lsd
+alias ls 'eza -lh --group-directories-first --icons=auto'
+alias lsa 'ls -a'
+alias lt 'eza --tree --level=2 --long --icons --git'
+alias lta 'lt -a'
+alias ff "fzf --preview 'bat --style=numbers --color=always {}'"
+alias cd "z"
+alias .. 'cd ..'
+alias ... 'cd ../..'
+alias .... 'cd ../../..'
+
 
 export GO111MODULE=auto
 
-starship init fish | source
 
 # pnpm
 set -gx PNPM_HOME "/home/zine/.local/share/pnpm"
