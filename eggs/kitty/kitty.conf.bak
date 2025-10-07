@@ -1,0 +1,26 @@
+font_family      Hack Nerd Font Mono
+bold_font        Hack Nerd Font Mono Bold
+italic_font      Hack Nerd Font Mono Italic
+bold_italic_font Hack Nerd Font Mono Bold Italic
+font_size        14.0
+
+background_opacity 0.95
+dynamic_background_opacity yes
+
+initial_window_width  1200
+initial_window_height 800
+window_padding_width  10
+
+
+# 启用远程控制（主题切换必需）
+allow_remote_control yes
+
+# 复制粘贴优化
+copy_on_select yes
+strip_trailing_spaces smart
+
+
+# BEGIN_KITTY_THEME
+# Nord
+include current-theme.conf
+# END_KITTY_THEME

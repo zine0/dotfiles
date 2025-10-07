@@ -12,14 +12,12 @@ alias lsa 'ls -a'
 alias lt 'eza --tree --level=2 --long --icons --git'
 alias lta 'lt -a'
 alias ff "fzf --preview 'bat --style=numbers --color=always {}'"
-alias cd "z"
+alias cd z
 alias .. 'cd ..'
 alias ... 'cd ../..'
 alias .... 'cd ../../..'
 
-
 export GO111MODULE=auto
-
 
 # pnpm
 set -gx PNPM_HOME "/home/zine/.local/share/pnpm"
@@ -33,7 +31,10 @@ fish_add_path "/home/zine/.local/bin"
 fish_add_path -g -p ~/flutter/bin
 
 # go
-fish_add_path "/home/zine/go/bin"
+fish_add_path /home/zine/go/bin
 
 # cargo/bin
 fish_add_path "/home/zine/.cargo/bin"
+
+# flutter
+fish_add_path /opt/flutter/bin
