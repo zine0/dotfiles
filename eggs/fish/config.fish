@@ -31,10 +31,16 @@ fish_add_path "/home/zine/.local/bin"
 fish_add_path -g -p ~/flutter/bin
 
 # go
-fish_add_path /home/zine/go/bin
+fish_add_path /usr/local/go/bin
 
 # cargo/bin
-fish_add_path "/home/zine/.cargo/bin"
+source "$HOME/.cargo/env.fish"
 
 # flutter
 fish_add_path /opt/flutter/bin
+
+fish_add_path "/home/zine/.local/bin"
+
+# gpg agent to replace ssh agent
+export GPG_TTY=$(tty)
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)

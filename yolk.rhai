@@ -32,4 +32,11 @@ kitty: #{
 targets: "~/.config/kitty",
          enabled:true,
        },
+zsh: #{
+    targets: #{
+        ".zshrc":"~/.zshrc",
+        ".zshenv":"~/.zshenv",
+      },
+    main_file: ".zshrc",
+  },
 };
