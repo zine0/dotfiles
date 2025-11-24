@@ -4,6 +4,16 @@ eval "$(zoxide init zsh)"
 # 初始化 starship
 eval "$(starship init zsh)"
 
+# Enable History
+HISTFILE=~/.zsh_history
+SAVEHIST=1000
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# enable kill word using ctrl + backspace
+bindkey '^H' backward-kill-word
+
+
 source <(fzf --zsh)
 
 # 别名
@@ -51,3 +61,15 @@ zinit light-mode for \
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions.git
+zinit light Aloxaf/fzf-tab
+
+# disable sort when completing `git checkout`
+zstyle ':completion:*:git-checkout:*' sort false
+# set descriptions format to enable group support
+# force zsh not to show completion menu, which allows fzf-tab to capture the unambiguous prefix
+zstyle ':completion:*' menu no
+# switch group using `<` and `>`
+zstyle ':fzf-tab:*' switch-group '<' '>'
+
+
+# eval "$(direnv hook zsh)"

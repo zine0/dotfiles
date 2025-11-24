@@ -44,3 +44,5 @@ fish_add_path "/home/zine/.local/bin"
 # gpg agent to replace ssh agent
 export GPG_TTY=$(tty)
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+
+set fzf_preview_dir_cmd eza --all -lh --group-directories-first --icons=auto

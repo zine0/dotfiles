@@ -1,11 +1,10 @@
-// -*- mode: jsonc -*-
 {
-    "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 42, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "spacing": 0, // Gaps between modules (4px)
-    // Choose the order of the modules
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "spacing": 2,
+
+    // 模块布局
     "modules-left": [
         "custom/arch",
         "hyprland/workspaces"
@@ -14,107 +13,110 @@
         "hyprland/window"
     ],
     "modules-right": [
+        "cpu",
+        "memory",
         "pulseaudio",
         "network",
-    	  "tray",
         "battery",
-        "clock"
+        "clock",
+        "tray"
     ],
-	"tray": {
-	    "spacing": 8
-	},
+
+    // 系统托盘
+    "tray": {
+        "spacing": 6,
+        "icon-size": 16
+    },
+
+    // 自定义 Arch 图标
     "custom/arch": {
         "format": "󰣇",
-        "tooltip": true,
-        "tooltip-format": "btw"
+        "tooltip": false,
+        "on-click": "rofi -show drun"
     },
+
+    // 工作区配置
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
         "format": "{name}",
         "format-icons": {
-            "urgent": "",
-            "active": "",
-            "default": ""
-        }
+            "urgent": "󱩍", // 醒目警告图标
+            "active": "󰮯", // 更有辨识度的活动图标
+            "default": "󰧟" // 默认图标
+        },
+        "on-click": "activate"
     },
-    "hyprland/window":{
-          "format":"{title}"  
+
+    // 窗口标题
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 80
     },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
+
+    // CPU 监控
+    "cpu": {
+        "format": "󰘚 {usage}%",
+        "tooltip": true,
+        "tooltip-format": "CPU: {usage}%",
+        "interval": 2
     },
+
+    // 内存监控
+    "memory": {
+        "format": "󰍛 {percentage}%",
+        "tooltip": true,
+        "tooltip-format": "RAM: {used:.1f}G/{total:.1f}G ({percentage}%)",
+        "interval": 2
+    },
+
+    // 音频控制
     "pulseaudio": {
         "format": "{icon} {volume}%",
-        "format-bluetooth": "{icon} {volume}%  {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": " {volume}%",
-        "format-source-muted": "",
+        "format-muted": "󰖁 {volume}%",
+        "format-bluetooth": "{icon} {volume}% 󰂯",
+        "format-bluetooth-muted": "󰖁 {volume}% 󰂯",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+            "headphone": "󰋋",
+            "hands-free": "󰋎",
+            "headset": "󰋎",
+            "phone": "󰏲",
+            "portable": "󰏲",
+            "car": "󰄋",
+            "default": ["󰕿", "󰖀", "󰕾"]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol",
+        "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     },
+
+    // 网络状态
     "network": {
-        "format-wifi": "  {essid} ({signalStrength}%)",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-	"on-click": "sh ~/scripts/rofi-wifi-menu/rofi-wifi-menu.sh"
-	 
+        "format-wifi": "󰖩 {essid}",
+        "format-ethernet": "󰈀 Wired", // 统一有线图标
+        "format-linked": "󰊗 {ifname} (No IP)",
+        "format-disconnected": "󰖪 Disconnected",
+        "tooltip-format": "IP: {ipaddr}"
     },
-    "cpu": {
-        "format": "  {usage}%",
-        "tooltip": true
-    },
-    "memory": {
-        "format": "  {}%",
-	"tooltip": true
-    },
-    "temperature": {
-        "interval": 10,
-        "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input",
-        "critical-threshold": 100,
-        "format-critical": " {temperatureC}",
-        "format": " {temperatureC}°C"
-    },
-    "hyprland/language": {
-       "format": "  {}",
-       "format-en": "EN",
-       "format-ru": "RU"
-    },
+
+    // 电池状态
     "battery": {
         "states": {
             "warning": 30,
             "critical": 15
         },
         "format": "{icon} {capacity}%",
-        "format-full": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰚥 {capacity}%",
+        "format-full": "󰁹 {capacity}%",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "tooltip-format": "Battery: {capacity}%"
     },
-    "battery#bat2": {
-        "bat": "BAT2"
-    },
+
+    // 时钟
     "clock": {
-        "format": "{:%H:%M | %e %B} ",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format": "󰥔 {:%H:%M}",
+        "format-alt": "󰸗 {:%b %d, %a}", // 更有意义的日期格式和图标
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     }
-	
 }

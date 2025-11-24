@@ -39,4 +39,8 @@ zsh: #{
       },
     main_file: ".zshrc",
   },
+ghostty: #{
+targets: "~/.config/ghostty",
+         enabled:true,
+       },
 };
