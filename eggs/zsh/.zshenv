@@ -25,3 +25,5 @@ path=($HOME/.local/bin $path)
 # gpg agent to replace ssh agent
 export GPG_TTY=$(tty)
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+
+export TERM=xterm-256color 

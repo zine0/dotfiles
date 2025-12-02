@@ -1,10 +1,13 @@
 return {
-    'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
     event = "VeryLazy",
     opts = {
         options = {
-            theme = 'onedark'
-        }
-    }
+            theme = "onedark",
+            disbaled_filetypes = {
+                "neo-tree",
+            },
+        },
+    },
 }

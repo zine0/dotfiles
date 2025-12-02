@@ -7,14 +7,16 @@
     // 模块布局
     "modules-left": [
         "custom/arch",
-        "hyprland/workspaces"
+        // "hyprland/workspaces"
+        "niri/workspaces"
     ],
     "modules-center": [
-        "hyprland/window"
+        // "hyprland/window"
+        "niri/window"
     ],
     "modules-right": [
-        "cpu",
-        "memory",
+        // "cpu",
+        // "memory",
         "pulseaudio",
         "network",
         "battery",
@@ -32,7 +34,7 @@
     "custom/arch": {
         "format": "󰣇",
         "tooltip": false,
-        "on-click": "rofi -show drun"
+        "on-click": "fuzzel"
     },
 
     // 工作区配置
@@ -48,9 +50,22 @@
         },
         "on-click": "activate"
     },
+    "niri/workspaces": {
+        "all-outputs": true,
+        "format": "{value}",
+        "format-icons": {
+            "urgent": "󱩍", // 醒目警告图标
+            "active": "󰮯", // 更有辨识度的活动图标
+            "default": "󰧟" // 默认图标
+        },
+    },
 
     // 窗口标题
     "hyprland/window": {
+        "format": "{}",
+        "max-length": 80
+    },
+    "niri/window": {
         "format": "{}",
         "max-length": 80
     },

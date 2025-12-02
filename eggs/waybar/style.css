@@ -17,7 +17,7 @@
 }
 
 window#waybar {
-    background: rgba(30, 30, 46, 0.95); /* Base: #1e1e2e */
+    background: #1e1e2e; /* Base: #1e1e2e */
     color: #cad3f5; /* Text: #cad3f5 */
     /* 移除底边框，让顶部更干净 */
 }
@@ -25,11 +25,8 @@ window#waybar {
 /* ========================================================================= */
 /* 模块容器 - 增加视觉层次感 */
 /* ========================================================================= */
-
-.modules-left,
-.modules-center,
-.modules-right {
-    background: rgba(36, 39, 58, 0.8); /* Mantle: #24273a */
+.modules-left {
+    background: #24273a; /* Mantle: #24273a */
     margin: 3px 4px; /* 增加左右间距，让 bar 看起来不那么拥挤 */
     padding: 0 4px;
     border-radius: 12px; /* 略微增大圆角 */
@@ -38,12 +35,14 @@ window#waybar {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.modules-left {
-    padding: 0 1px;
-}
 
 .modules-center {
     padding: 0 8px; /* 居中模块增加更多左右间距 */
+}
+
+.modules-right {
+    margin: 3px 4px; /* 增加左右间距，让 bar 看起来不那么拥挤 */
+    padding: 0 4px;
 }
 
 /* ========================================================================= */
@@ -67,10 +66,6 @@ window#waybar {
     transition: all 0.2s ease-in-out; /* 平滑过渡效果 */
 }
 
-#workspaces button:hover {
-    background: rgba(110, 115, 141, 0.2); /* Subtext0 hover effect */
-    color: #cad3f5;
-}
 
 #workspaces button.active {
     background: #c6a0f6; /* Mauve: #c6a0f6 */
@@ -78,11 +73,6 @@ window#waybar {
     box-shadow: 0 0 6px rgba(198, 160, 246, 0.4); /* 增加光晕效果 */
 }
 
-#workspaces button.urgent {
-    background: #e78284; /* Red: #e78284 */
-    color: #24273a;
-    box-shadow: 0 0 8px rgba(231, 130, 132, 0.6);
-}
 
 /* ========================================================================= */
 /* 系统组件 - 统一外观 */
@@ -94,8 +84,6 @@ window#waybar {
     font-weight: bold;
     padding: 0 10px;
     margin: 0 4px;
-    /* 使用一个更柔和的渐变分隔线 */
-    border-right: 1px solid rgba(138, 173, 244, 0.35);
 }
 
 /* 统一所有右侧模块的基础样式 */
@@ -117,85 +105,86 @@ window#waybar {
 
 /* --- 音频 --- */
 #pulseaudio {
-    background: rgba(138, 173, 244, 0.25);
-    color: #8aadf4;
-    border: 1px solid #8aadf4; /* 颜色更纯净的边框 */
+    background: #a6da95; /* Green: #a6da95 */
+    color: #24273a;
+    font-weight: 700;
 }
 #pulseaudio.muted {
-    color: #f0c6c6; /* 提醒颜色 */
-    background: rgba(240, 198, 198, 0.25);
-    border: 1px solid #f0c6c6;
+    background: #f38ba8; /* Red: #f38ba8 */
+    color: #24273a;
+    font-weight: 700;
 }
 
 /* --- 网络 --- */
 #network {
-    background: rgba(166, 218, 149, 0.25);
-    color: #a6da95; /* Green: #a6da95 */
-    border: 1px solid #a6da95;
+    background: #eed49f; /* Yellow: #eed49f */
+    color: #24273a;
+    font-weight: 700;
 }
 #network.disconnected {
-    background: rgba(243, 139, 168, 0.25);
-    color: #f38ba8; /* Red: #f38ba8 */
-    border: 1px solid #f38ba8;
+    background: #f38ba8; /* Red: #f38ba8 */
+    color: #24273a;
+    font-weight: 700;
 }
 
 /* --- 电池 --- */
 #battery {
-    background: rgba(238, 212, 159, 0.25);
-    color: #eed49f; /* Yellow: #eed49f */
-    border: 1px solid #eed49f;
+    background: #f5a97f; /* Peach: #f5a97f */
+    color: #24273a;
+    font-weight: 700;
 }
 #battery.charging {
-    background: rgba(166, 218, 149, 0.35);
-    color: #a6da95;
+    background: #a6da95; /* Green: #a6da95 */
+    color: #24273a;
+    font-weight: 700;
 }
 #battery.warning {
-    background: rgba(238, 153, 103, 0.35); /* Peach: #ee99a0 */
-    color: #ee99a0;
+    background: #eed49f; /* Yellow: #eed49f */
+    color: #24273a;
+    font-weight: 700;
 }
 #battery.critical {
-    background: rgba(243, 139, 168, 0.45);
-    color: #f38ba8; /* Red: #f38ba8 */
+    background: #f38ba8; /* Red: #f38ba8 */
+    color: #24273a;
+    font-weight: 700;
     animation: critical_pulse 1s ease-in-out infinite alternate;
 }
 
 @keyframes critical_pulse {
     from {
-        background-color: rgba(243, 139, 168, 0.45);
-        border-color: rgba(243, 139, 168, 0.6);
+        background-color: #f38ba8;
     }
     to {
-        background-color: rgba(243, 139, 168, 0.65);
-        border-color: rgba(243, 139, 168, 1.0);
+        background-color: #ea999c;
     }
 }
 
 /* --- 系统托盘 --- */
 #tray {
-    background: rgba(183, 189, 248, 0.25);
-    border: 1px solid #b7bbf8; /* Lavender: #b7bbf8 */
+    background: #b7bdf8; /* Lavender: #b7bdf8 */
+    color: #24273a;
+    font-weight: 700;
 }
 
 /* --- CPU --- */
 #cpu {
-    background: rgba(245, 194, 231, 0.25);
-    color: #f5c2e7; /* Pink: #f5c2e7 */
-    border: 1px solid #f5c2e7;
+    background: #c6a0f6; /* Mauve: #c6a0f6 */
+    color: #24273a;
+    font-weight: 700;
 }
 
 /* --- 内存 --- */
 #memory {
-    background: rgba(240, 198, 198, 0.25);
-    color: #f0c6c6; /* Maroon: #f0c6c6 */
-    border: 1px solid #f0c6c6;
+    background: #f5bde6; /* Pink: #f5bde6 */
+    color: #24273a;
+    font-weight: 700;
 }
 
 /* --- 窗口标题 --- */
 #window {
     font-weight: 600;
     color: #cad3f5;
-    padding: 0 10px;
-    font-size: 13px;
+    font-size: 14px;
     font-style: italic; /* 略微倾斜，增加设计感 */
 }
 
@@ -207,7 +196,8 @@ window#waybar {
 #tray:hover,
 #cpu:hover,
 #memory:hover {
-    background-color: rgba(54, 58, 79, 0.8); /* Surface1: #363a4f */
+    background-color: #cad3f5; /* 悬停时变为浅色 */
+    color: #24273a;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 悬停时增加阴影，更有浮动感 */
 }
 
