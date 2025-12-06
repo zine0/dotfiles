@@ -5,8 +5,8 @@ return {
     opts = {
         options = {
             theme = "onedark",
-            disbaled_filetypes = {
-                "neo-tree",
+            disabled_filetypes = {
+                -- "neo-tree",
             },
         },
     },

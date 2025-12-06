@@ -34,7 +34,7 @@
     "custom/arch": {
         "format": "󰣇",
         "tooltip": false,
-        "on-click": "fuzzel"
+        "on-click": "wlogout -b 6"
     },
 
     // 工作区配置
