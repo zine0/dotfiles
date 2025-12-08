@@ -1,1 +1,5 @@
-return { "nvim-mini/mini.ai", version = false }
+return {
+    "nvim-mini/mini.ai",
+    version = false,
+    event = "VeryLazy",
+}

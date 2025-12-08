@@ -60,8 +60,7 @@ zinit light-mode for \
 
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-completions.git
-zinit light Aloxaf/fzf-tab
+zinit light zsh-users/zsh-completions
 
 # disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false

@@ -43,4 +43,8 @@ ghostty: #{
 targets: "~/.config/ghostty",
          enabled:true,
        },
+fuzzel: #{
+targets: "~/.config/fuzzel",
+         enabled:true,
+       },
 };
