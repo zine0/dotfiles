@@ -1,6 +1,6 @@
 return {
     "benomahony/uv.nvim",
-    ft = { python },
+    ft = { "python" },
     dependencies = {
         "nvim-telescope/telescope.nvim",
     },

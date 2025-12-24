@@ -87,7 +87,7 @@ window#waybar {
 }
 
 /* 统一所有右侧模块的基础样式 */
-#clock, #pulseaudio, #network, #battery, #tray, #cpu, #memory {
+#clock, #wireplumber, #network, #battery, #tray, #cpu, #memory {
     border-radius: 8px; /* 统一圆角 */
     margin: 2px 2px;
     padding: 2px 10px; /* 增加垂直和水平内边距 */
@@ -104,12 +104,12 @@ window#waybar {
 }
 
 /* --- 音频 --- */
-#pulseaudio {
+#wireplumber {
     background: #a6da95; /* Green: #a6da95 */
     color: #24273a;
     font-weight: 700;
 }
-#pulseaudio.muted {
+#wireplumber.muted {
     background: #f38ba8; /* Red: #f38ba8 */
     color: #24273a;
     font-weight: 700;
@@ -190,7 +190,7 @@ window#waybar {
 
 /* --- 悬停效果 --- */
 #clock:hover,
-#pulseaudio:hover,
+#wireplumber:hover,
 #network:hover,
 #battery:hover,
 #tray:hover,

@@ -6,15 +6,15 @@ export let eggs = #{
 alacritty: #{
 targets: "~/.config/alacritty",
            templates:["alacritty.yml"],
-           enabled:true,
+           enabled:false,
            },
 helix: #{
 targets: "~/.config/helix",
-         enabled:true,
+         enabled:false,
        },
 hypr: #{
 targets: "~/.config/hypr",
-         enabled:true,
+         enabled:false,
       },
 waybar: #{
 targets: "~/.config/waybar",
@@ -30,7 +30,7 @@ targets: "~/.config/nvim",
       },
 kitty: #{
 targets: "~/.config/kitty",
-         enabled:true,
+         enabled:false,
        },
 zsh: #{
     targets: #{
@@ -38,6 +38,7 @@ zsh: #{
         ".zshenv":"~/.zshenv",
       },
     main_file: ".zshrc",
+    enabled:false,
   },
 ghostty: #{
 targets: "~/.config/ghostty",
@@ -47,4 +48,18 @@ fuzzel: #{
 targets: "~/.config/fuzzel",
          enabled:true,
        },
+git: #{
+    targets: #{
+        "gitconfig":"~/.gitconfig",
+    },
+    enabled:true,
+},
+scripts: #{
+    targets:  "~/scripts",
+    enabled:true,
+},
+niri: #{
+    targets: "~/.config/niri",
+    enabled:true,
+},
 };

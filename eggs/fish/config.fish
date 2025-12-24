@@ -4,6 +4,8 @@ end
 
 zoxide init fish | source
 starship init fish | source
+direnv hook fish | source
+
 
 alias cl clear
 alias hx helix
@@ -46,3 +48,5 @@ export GPG_TTY=$(tty)
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
 set fzf_preview_dir_cmd eza --all -lh --group-directories-first --icons=auto
+set -g fish_greeting ''
+set -g fish_key_bindings fish_vi_key_bindings

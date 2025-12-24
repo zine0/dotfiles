@@ -17,7 +17,7 @@
     "modules-right": [
         // "cpu",
         // "memory",
-        "pulseaudio",
+        "wireplumber",
         "network",
         "battery",
         "clock",
@@ -34,7 +34,7 @@
     "custom/arch": {
         "format": "󰣇",
         "tooltip": false,
-        "on-click": "wlogout -b 6"
+        "on-click": "~/scripts/power_manager.sh"
     },
 
     // 工作区配置
@@ -87,11 +87,9 @@
     },
 
     // 音频控制
-    "pulseaudio": {
+    "wireplumber": {
         "format": "{icon} {volume}%",
         "format-muted": "󰖁 {volume}%",
-        "format-bluetooth": "{icon} {volume}% 󰂯",
-        "format-bluetooth-muted": "󰖁 {volume}% 󰂯",
         "format-icons": {
             "headphone": "󰋋",
             "hands-free": "󰋎",

@@ -1,3 +1,4 @@
+local builtin = require("telescope.builtin")
 return {
     "nvim-telescope/telescope.nvim",
     tag = "v0.2.0",
@@ -7,7 +8,7 @@ return {
             "<leader>ff",
             mode = { "n" },
             function()
-                require("telescope").find_files()
+                builtin.find_files()
             end,
             desc = "Telescope find files",
         },
@@ -15,7 +16,7 @@ return {
             "<leader>fg",
             mode = { "n" },
             function()
-                require("telescope").live_grep()
+                builtin.live_grep()
             end,
             desc = "Telescope live grep",
         },
@@ -23,7 +24,7 @@ return {
             "<leader>fb",
             mode = { "n" },
             function()
-                require("telescope").buffers()
+                builtin.buffers()
             end,
             desc = "Telescope buffers",
         },
@@ -31,10 +32,22 @@ return {
             "<leader>fh",
             mode = { "n" },
             function()
-                require("telescope").help_tags()
+                builtin.help_tags()
             end,
             desc = "Telescope help tags",
         },
     },
     dependencies = { "nvim-lua/plenary.nvim" },
+    opts = function()
+        require("telescope").load_extension("ui-select")
+        return {
+            extensions = {
+                ["ui-select"] = {
+                    require("telescope.themes").get_dropdown({
+                        -- even more opts
+                    }),
+                },
+            },
+        }
+    end,
 }
