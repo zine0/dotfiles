@@ -1,0 +1,82 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+//
+{
+  "outline_panel": {
+    "dock": "right"
+  },
+  "buffer_font_family": "FiraCode Nerd Font Mono",
+  "buffer_font_fallbacks": ["Hack Nerd Font Mono"],
+  "relative_line_numbers": "enabled",
+  "buffer_font_features": {
+    "calt": true,
+    "liga": true,
+    "ss01": true
+  },
+  "minimap": {
+    "show": "auto"
+  },
+  "inlay_hints": {
+    "enabled": true
+  },
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Material Icon Theme"
+  },
+  "vim_mode": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "One Dark Pro"
+  },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 10000
+    }
+  },
+  "auto_signature_help": false,
+  "gutter": {
+    "line_numbers": true,
+    "runnables": true,
+    "breakpoints": true,
+    "folds": true
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  },
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        // get more cargo-less diagnostics from rust-analyzer,
+        // which might include false-positives (those can be turned off by their names)
+        "diagnostics": {
+          "experimental": {
+            "enable": true
+          }
+        },
+        // To disable the checking entirely
+        // (ignores all cargo and check settings below)
+        "checkOnSave": true,
+        // To check the `lib` target only.
+        "cargo": {
+          "allTargets": false
+        },
+        // Use `-p` instead of `--workspace` for cargo check
+        "check": {
+          "workspace": false
+        }
+      }
+    }
+  }
+}
